@@ -1,8 +1,6 @@
 ##  我的文章
 
-### [ECMA20xx](./ECMA20xx)
-
-关于 ES的文章
+### [ECMA20xx](https://github.com/freeshineit/ecma20xxfeatures/tree/master/src)
 
 ### [express](./express)
 
