@@ -28,7 +28,7 @@
 
 关于 go 的文章
 
-### [markdown](/freeshineit/Markdown)
+### [markdown](https://github.com/freeshineit/Markdown)
 
 ### [other](./other)
 
