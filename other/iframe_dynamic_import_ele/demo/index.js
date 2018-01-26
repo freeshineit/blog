@@ -1,10 +1,10 @@
 var demo = {
 	init: function () {
-		var str = "<div>...</div>" 
-		var popDiv=document.createElement('div'); 
-		// popDiv.style.xx = xxx; 
-		popDiv.id = "pop"; 
-		popDiv.innerHTML = str; 
+		var str = "<div>这是一个div标签</div>" 
+		var createDiv=document.createElement('div'); 
+		createDiv.style.background = 'yellow'; 
+		createDiv.id = "pop"; 
+		createDiv.innerHTML = str;
 
 		var iframeBody = document.getElementById("frame_id").contentWindow.document.getElementsByTagName("body")[0]; 
 
@@ -13,13 +13,13 @@ var demo = {
 		if(iframeHead && iframeHead.length){ 
 			iframeHead = iframeHead[0]; 
 		}else{ 
-			iframeHead = iframeBody; 
+			iframeHead = iframeBody;
 		} 
 
 		// // 添加 html 内容
 		var elemDivTag = document.getElementById("frame_id").contentWindow.document.getElementById("pop"); 
 		if(!elemDivTag){ 
-			iframeBody.appendChild(popDiv)
+			iframeBody.appendChild(createDiv)
 		} 
 
 		// // 添加 css 样式

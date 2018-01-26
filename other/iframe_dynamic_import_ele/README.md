@@ -5,9 +5,9 @@
 ```
 	var demo = {
 		init: function () {
-			var str = "<div>...</div>" 
+			var str = "<div>这是一个div标签</div>" 
 			var popDiv=document.createElement('div'); 
-			// popDiv.style.xx = xxx; 
+			popDiv.style.fontSise = '50px'; 
 			popDiv.id = "pop"; 
 			popDiv.innerHTML = str; 
 
