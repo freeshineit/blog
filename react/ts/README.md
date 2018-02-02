@@ -2,10 +2,11 @@
 #### react + typescript 创建组件
 
 IBoxProps是一个接口 在组件中充当 props
+
 IBoxState是一个接口 在组件中充当 state
 
 ```
-	interface IBoxProps extends React.Props<IBoxProps> {
+interface IBoxProps extends React.Props<IBoxProps> {
     x?: number;
     y?: number;
     height?: number;
