@@ -9,7 +9,8 @@ You can write Redux apps with React, Angular, Ember, jQuery, or vanilla JavaScri
 从一开始，我们需要强调Redux与React没有任何关系。您可以使用React，Angular，Ember，jQuery或vanilla JavaScript编写Redux应用程序。
 
 ```
-That said, Redux works especially well with libraries like React and Deku because they let you describe UI as a function of state, 
+That said, Redux works especially well with libraries like React and Deku 
+because they let you describe UI as a function of state, 
 and Redux emits state updates in response to actions.
 ```
 也就是说，Redux与React和Deku等库合作得非常好，因为它们让您将UI描述为状态的函数，并且Redux响应操作发出状态更新
@@ -46,7 +47,8 @@ The UMD build exports a global called window.ReactRedux if you add it to your pa
 
 ```
 React bindings for Redux embrace the idea of separating presentational and container components. 
-If you're not familiar with these terms, read about them first, and then come back. They are important, so we'll wait!
+If you're not familiar with these terms, read about them first, and then come back. 
+They are important, so we'll wait!
 ```
 
 Redux的React绑定包含分离表示和容器组件的想法。如果您不熟悉这些条款，[请先阅读有关](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)条款，然后再回来。他们很重要，所以我们会等待！
@@ -67,7 +69,7 @@ Finished reading the article? Let's recount their differences:
 
 |                 | 演示组件                          |  容器组件                                        |
 |-----------------|----------------------------------|------------------------------------------------|
-| 目的             | 看起来如何（标记，样式）             |  如何工作 (数据读取，状态更新)                     |
+| 目的             | 看起来如何（标记，样式）             |  如何工作 (数据读取，状态更新)                     |
 | 意识到Redux      | 否                               |  是                                             |
 | 读取数据         | 从props中读取数据                  |  订阅Redux状态                                   |
 | 改变数据         | 从props中调用回调                  |  派发Redux行动                                   |
@@ -163,7 +165,7 @@ To change the visibility filter, we will provide a FilterLink container componen
 +  `FilterLink` gets the current visibility filter and renders a `Link`.
    - `filter: string` is the visibility filter it represents.
 
-我们还需要一些容器组件将演示组件连接到Redux。例如，演示组件需要一个像这样的容器订阅Redux store，并知道如何应用当前的可见性过滤器。要更改可见性过滤器，我们将提供一个容器组件，呈现一个在点击时发送适当操作的容器组件：
+我们还需要一些容器组件将演示组件连接到Redux。例如，演示组件`TodoList`需要一个像`VisibleTodoList`这样的容器订阅Redux store，并知道如何应用当前的可见性过滤器。要更改可见性过滤器，我们将提供一个`FilterLink`容器组件，渲染一个在点击时派发适当操作的`Link`：
 
 +  `VisibleTodoList` 根据当前可见性过滤器过滤待todo项并渲染 `TodoList`组件。
 +  `FilterLink` 获取当前可见性过滤器并渲染一个 `Link`组件。
