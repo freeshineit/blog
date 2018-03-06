@@ -201,11 +201,14 @@
 }
 ```
 
-
 by @shine(xiaoshaoqq@gmail.com)
+
 date: 2018-03-06
+
 [github地址](https://github.com/freeshineit/blog/tree/master/css/flexbox)
+
 [example](https://github.com/freeshineit/blog/tree/master/css/flexbox/example)
+
 参考：[Flexbox完整指南](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 
