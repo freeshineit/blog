@@ -1,0 +1,248 @@
+.bg_red{
+	background-color: red;
+}
+.bg_blue{
+	background-color: blue;
+}
+.bg_yellow{
+	background-color: yellow;
+}
+.bg_black{
+	background-color: black;
+}
+
+.container_1, .container_2, .container_3, .container_4, .container_5, .container_6, .container_7, .container_8, .container_9{
+	margin-top: 20px;
+}
+
+.container_1 {
+	display: inline-flex;  /*超出宽度 滚动*/
+	/*flex-direction: row; */ /*主轴方向 默认*/
+	flex-direction: row-reverse;   （react-native中默认这种模式）
+	/*flex-direction: column; */ /*侧轴方向 react-native中默认这种模式）*/
+	/*flex-direction: column; */ 
+}
+
+.container_1 .flex_item {
+	width: 100px;
+	height: 100px;
+}
+
+.container_2{
+	display: flex;
+	flex-wrap: wrap-reverse;
+	/*flex-wrap: wrap;*/
+	/*flex-flow: row-reverse wrap-reverse;*/
+}
+
+.container_2 .flex_item {
+	width: 100px;
+	height: 100px;
+}
+
+.container_3{
+	display: flex;
+	/*justify-content: flex-start;*/  /*项目从起始位置排列*/
+	/*justify-content: flex-end;*/  /*项目从结束位置排列*/ 
+	/*justify-content: center;*/
+	/*justify-content: space-between;*/
+	/*justify-content: space-around;*/
+	justify-content: space-evenly;  /*空间均匀分配*/
+}
+
+.container_3 .flex_item {
+	width: 100px;
+	height: 100px;
+	color: #fff;
+}
+
+
+.container_4{
+	display: flex;
+	/*align-items: flex-start;*/
+	/*align-items: flex-end;*/
+	/*align-items: center;*/
+	/*align-items: baseline;*/
+	align-items: stretch;
+}
+
+.container_4 .flex_item{
+	width: 100px;
+	height: 100px;
+}
+
+.container_4 .flex_item:nth-child(1){
+	width: 100px;
+	height: 50px;
+	font-size: 20px;
+}
+.container_4 .flex_item:nth-child(2){
+	width: 100px;
+	height: 100px;
+	font-size: 40px;
+}
+.container_4 .flex_item:nth-child(3){
+	width: 100px;
+	height: 80px;
+	font-size: 12px;
+}
+.container_4 .flex_item:nth-child(4){
+	width: 100px;
+	height: 40px;
+	color: #fff;
+}
+
+
+.container_5{
+	display: flex;
+	flex-wrap: wrap;
+	height:700px;
+	width: 300px;
+	border: 1px solid #ededed;
+	/*align-content: flex-start;*/
+	/*align-content: flex-end;*/
+	align-content: center;
+	/*align-content: stretch;*/
+	/*align-content: space-between;*/
+	/*align-content: space-around;*/
+}
+.container_5 .flex_item{
+	width: 100px;
+	height: 100px;
+}
+
+.container_6{
+	display: flex;
+}
+
+.container_6 .flex_item{
+	width: 100px;
+	height: 100px;
+}
+
+.container_6 .flex_item:nth-child(1){
+	order: 1;
+}
+
+.container_6 .flex_item:nth-child(2){
+	order: -1;
+}
+
+.container_6 .flex_item:nth-child(3){
+	order: 4;
+}
+
+.container_7{
+	display: flex;
+}
+.container_7 .flex_item{
+	width: 100px;
+	height: 100px;
+}
+
+.container_7 .flex_item:nth-child(1){
+	flex-grow: 1;
+}
+.container_7 .flex_item:nth-child(2){
+	flex-grow: 2;
+}
+.container_7 .flex_item:nth-child(3){
+	flex-grow: 0;
+}
+.container_7 .flex_item:nth-child(4){
+	flex-grow: 3;
+}
+
+
+.container_8{
+	display: flex;
+	width: 300px;
+}
+.container_8 .flex_item{
+	width: 100px;
+	height: 100px;
+}
+.container_8 .flex_item:nth-child(1){
+	flex-shrink: 0;
+}
+.container_8 .flex_item:nth-child(2){
+	flex-shrink: 2;
+}
+.container_8 .flex_item:nth-child(3){
+	flex-shrink: 2;
+}
+.container_8 .flex_item:nth-child(4){
+	flex-shrink: 2;
+}
+
+
+.container_9{
+	display: flex;
+}
+.container_9 .flex_item{
+	width: 100px;
+	height: 100px;
+}
+.container_9 .flex_item:nth-child(1){
+	flex-basis: 50px;
+}
+.container_9 .flex_item:nth-child(2){
+	flex-basis: 100px;
+}
+.container_9 .flex_item:nth-child(3){
+	flex-basis: 50%;
+}
+.container_9 .flex_item:nth-child(4){
+	flex-basis: auto;
+}
+
+.container_10{
+	display: flex;
+}
+.container_10 .flex_item{
+	width: 100px;
+	height: 100px;
+}
+.container_10 .flex_item:nth-child(1){
+	flex: 1;
+}
+.container_10 .flex_item:nth-child(2){
+	flex: 2;
+}
+.container_10 .flex_item:nth-child(3){
+	flex: 4;
+}
+.container_10 .flex_item:nth-child(4){
+	flex: 1;
+}
+
+.container_11{
+	display: flex;
+	align-items: flex-start;
+	height: 150px;
+}
+.container_11 .flex_item{
+	width: 100px;
+	height: 100px;
+}
+.container_11 .flex_item:nth-child(1){
+	align-self: center
+}
+.container_11 .flex_item:nth-child(2){
+	align-self: flex-end;
+}
+.container_11 .flex_item:nth-child(3){
+}
+.container_11 .flex_item:nth-child(4){
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,68 @@
+.bg_red{
+	background-color: red;
+}
+.bg_blue{
+	background-color: blue;
+}
+.bg_yellow{
+	background-color: yellow;
+}
+.bg_black{
+	background-color: black;
+}
+
+.container_1, .container_2, .container_3, .container_4, .container_5, .container_6, .container_7, .container_8, .container_9{
+	margin-top: 20px;
+}
+
+.container_1 {
+	display: inline-grid; // 超出宽度 滚动
+	/*grid-direction: row; // 主轴方向 默认*/
+	grid-direction: row-reverse; // 侧轴方向 （react-native中默认这种模式）
+}
+
+.container_1 .grid_item {
+	width: 100px;
+	height: 100px;
+}
+
+.container_2{
+	display: grid;
+	grid-wrap: wrap-reverse;
+	/*grid-flow: row-reverse wrap-reverse;*/
+}
+
+.container_2 .grid_item {
+	width: 100px;
+	height: 100px;
+}
+
+.container_3{
+	display: grid;
+	/*justify-content: grid-start;*/  /*项目从起始位置排列*/
+	/*justify-content: grid-end;*/  /*项目从结束位置排列*/ 
+	/*justify-content: center;*/
+	/*justify-content: space-between;*/
+	/*justify-content: space-around;*/
+	justify-content: space-evenly;  /*空间均匀分配*/
+}
+
+.container_3 .grid_item {
+	width: 100px;
+	height: 100px;
+	color: #fff;
+}
+
+
+
+.container_4{}
+
+.container_5{}
+
+.container_6{}
+
+.container_7{}
+
+.container_8{}
+
+.container_9{}
