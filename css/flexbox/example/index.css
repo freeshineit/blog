@@ -17,8 +17,8 @@
 
 .container_1 {
 	display: inline-flex;  /*超出宽度 滚动*/
-	/*flex-direction: row; */ /*主轴方向 默认*/
-	flex-direction: row-reverse;   （react-native中默认这种模式）
+	flex-direction: row;  /*主轴方向 默认*/
+	/*flex-direction: row-reverse;   （react-native中默认这种模式）*/
 	/*flex-direction: column; */ /*侧轴方向 react-native中默认这种模式）*/
 	/*flex-direction: column; */ 
 }

@@ -14,10 +14,10 @@
 
 建立了主轴，从而定义了flex项目放置在flex容器中的方向。Flexbox是单向布局概念。将flex项目视为主要布置在水平行或垂直列中。
 
-+	`row`浏览器中默认， 主轴方向 从左到右 默认不换行
-+	`row-reverse` 主轴反方向排序 从右到左 默认不换行
++	`row` 浏览器中默认， 主轴方向 从左到右 默认不换行
++	`row-reverse`  反转 row 排列
 +	`column` 侧轴方向  从上到下
-+	`column-reverse` 侧轴反方向 从下到上
++	`column-reverse` 反转 column 排列
 
 
 ```css
@@ -28,11 +28,11 @@
 
 ###  flex-wrap: nowrap | wrap | wrap-reverse
 
-默认情况下，flex项目将全部尝试适合一行。你可以改变它，并允许项目根据需要用这个属性进行换行。
+默认情况下，flex项目将全部尝试适合一行（默认情况下不换行）。你可以改变它，并允许项目根据需要用这个属性进行换行。
 
-+	`nowrap` 默认 不换行
-+	`wrap`  flex项目将从上到下成多行
-+	`wrap-reverse` flex项目将从下到上成多行
++	`nowrap` 默认 不换行(子元素可能会溢出)
++	`wrap`  flex项目将从上到下成多行（flex 子元素溢出的部分会被放置到下一行）
++	`wrap-reverse` 反转 wrap 排列
 
 ```css
 .container{
@@ -42,7 +42,7 @@
 
 ### flex-flow: <‘flex-direction’> || <‘flex-wrap’> 
 	
-这是一个简写`flex-direction`和`flex-wrap`属性，它们一起定义了flex容器的主轴和交叉轴。默认是`row nowrap`。
+这是一个简写`flex-direction`和`flex-wrap`属性，它们一起定义了flex容器的主轴和侧轴。默认是`row nowrap`。
 
 ```css
 .container{
@@ -52,11 +52,11 @@
 
 ### justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly
 
-定义了沿主轴的对齐。当一条线上的所有弹性物品都不灵活或灵活但达到其最大尺寸时，它有助于分配剩余空间。当物品溢出时，它也对物品的排列起到一定的控制作用。
+定义了沿主轴的对齐。当一条线上的所有flex项目都不灵活或灵活，但达到其最大尺寸时，它有助于分配剩余空间。当物品溢出时，它也对物品的排列起到一定的控制作用。
 
-+	`flex-start` 项目从起始位置排列
-+	`flex-end` 项目从结束位置排列
-+	`center` 项目沿着这条线居中
++	`flex-start` 项目从flex盒子的起始位置排列
++	`flex-end` 项目从flex盒子的结束位置排列
++	`center` 项目沿着flex盒子向行中间对齐（沿主轴居中对齐）
 +	`space-between` 项目均匀分布在行中; 第一项是在起始行，最后一行是最后一行
 +	`space-around` 物品均匀分布在线上，周围有相同的空间。请注意，视觉上空间不相等，因为所有物品在两侧都有相同的空间。第一个项目将在容器边缘有一个空间单位，但下一个项目之间有两个空间单元，因为下一个项目有其自己的间距
 +	`space-evenly` 项目是分布式的，以便任何两个项目之间的间距（以及到边缘的空间）相等
@@ -74,8 +74,8 @@
 
 +	`flex-start`  项目侧轴上边沿对齐
 +	`flex-end` 项目侧轴下边沿对齐
-+	`center` 项目侧轴剧中
-+	`baseline` 项目基线对齐对齐
++	`center` 项目侧轴居中
++	`baseline` 项目基线对齐
 +	`stretch` 默认  拉伸填充容器
 
 ```css
@@ -86,13 +86,25 @@
 
 ### align-content: flex-start | flex-end | center | space-between | space-around | stretch
 
-当侧轴上有额外的空间时，这会将Flex容器的按`justify-content`对齐，类似于如何在主轴内对齐各个项目。
+当侧轴上有额外的空间时，这会将flex容器的按`justify-content`对齐，类似于如何在主轴内对齐各个项目。
 注意：只有一行是弹性项目时，此属性不起作用
 
++	`flex-start` 各行向flex容器的起始位置对齐
++	`flex-end` 各行向flex容器的结束位置对齐
++	`center` 各行向flex容器的中间对齐
++	`space-between` 各行在flex容器中平均分布。如果剩余的空间是负数或flex容器中只有一行，该值等效于'flex-start'。在其它情况下，第一行的侧轴起始边界紧靠住flex容器的侧轴起始内容边界，最后一行的侧轴结束边界紧靠住flex容器的侧轴结束内容边界，剩余的行则按一定方式在flex窗口中排列，以保持两两之间的空间相等
++	`space-around` 各行在flex容器中平均分布，两端保留子元素与子元素之间间距大小的一半。如果剩余的空间是负数或flex容器中只有一行，该值等效于'center'。在其它情况下，各行会按一定方式在flex容器中排列，以保持两两之间的空间相等，同时第一行前面及最后一行后面的空间是其他空间的一半。
++	`stretch` 拉伸填充容器
 
-### order: <integer>
+```css
+.container{
+	align-content: flex-start | flex-end | center | space-between | space-around | stretch
+}
+```
 
-默认情况下，Flex项目按源代码顺序排列。但是，该`order`属性控制它们在flex容器中的显示顺序。
+### order: <integer> 
+
+默认情况下，flex项目按源代码顺序排列。但是，该`order`属性控制它们在flex容器中的显示顺序。
 `order`属性用于更改在主轴方向上排列顺序。
 `order`数值越小，排列越靠前，默认为0，可以为负数。
 
