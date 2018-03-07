@@ -128,7 +128,7 @@
 
 ### flex-shrink: <number>
 
-定义了Flex项目在必要时收缩的能力。
+定义了flex项目在必要时收缩的能力。
 注意：负数无效
 
 ```css
@@ -186,8 +186,8 @@
 
 ### align-self: auto | flex-start | flex-end | center | baseline | stretch
 
-允许`align-items`为各个Flex项目覆盖默认对齐方式（或由其指定的对齐方式).
-请注意`float`，`clear`并且`vertical-align`对Flex项目没有影响。
+允许`align-items`为各个flex项目覆盖默认对齐方式（或由其指定的对齐方式).
+请注意`float`，`clear`并且`vertical-align`对flex项目没有影响。
 
 ```css
 .item {
