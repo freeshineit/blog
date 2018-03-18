@@ -1,4 +1,4 @@
-<div style="height: 150px; clear: both;box-sizing: border-box; padding-top: 25px;">
+<div style="height: 150px; display: table;clear: both;box-sizing: border-box; padding-top: 25px;">
 	<div style="display: inline-block; float: left">
     	<img src="./images/profile.png" style="width: 100px;display: inline-block; margin-right: 20px;" alt="">
 	</div>
@@ -9,17 +9,18 @@
 		<p style="margin: 10px 0;">求职意向: <b>前端开发工程师</b></p>
 		<p style="margin: 10px 0;">
 			<span style='margin-right: 20px;'>
-				<span style=""><img src="./images/user.png" style="width: 18px;height: 18px;display: inline-block; "></span>
+				<span style=""><img src="./images/user.png" style="width: 18px;height: 18px;margin-bottom: -3px;display: inline-block; "></span>
 				<span style='padding-bottom: 5px;'>1992.03.13</span>
 			</span>
 			<span style='margin-right: 20px;'>
-			    <span style=""><img src="./images/address.png" style="width: 18px;height: 18px;display: inline-block; "></span>
+			    <span style=""><img src="./images/address.png" style="width: 18px;height: 18px;margin-bottom: -3px;display: inline-block; "></span>
 				<span>浙江 杭州</span></span>
 			<span  style='margin-right: 20px;'>
-			    <span style=""><img src="./images/phone.png" style="width: 18px;height: 18px;display: inline-block; "></span>
+			    <span style=""><img src="./images/phone.png" style="width: 18px;height: 18px;margin-bottom: -3px;display: inline-block; "></span>
 			    <span>17682343077</span>
 			</span>
-			<span ><span style=""><img src="./images/email.png" style="width: 18px;height: 18px;display: inline-block; "></span>
+			<span >
+				<span style=""><img src="./images/email.png" style="width: 18px;height: 18px;margin-bottom: -3px;display: inline-block; "></span>
 				<span>842383741@qq.com</span>
 			</span>
 		</p>
@@ -94,12 +95,14 @@
 `Node`、`Java`、`Linux`
 
 -----
+<br ><br ><br >
+
 
 #### 自我评价
 
 ```
-具有良好的沟通能力和钻研精神，具有良好的团队合作精神;工作生活中，能做到在成功中累积经验，在失败中吸取教训，积极进取，不断创新，
-以持之以恒的态度对待每一件事。喜欢接触新事物。
+具有良好的沟通能力和钻研精神，具有良好的团队合作精神;工作生活中，能做到在成功中累积经验，
+在失败中吸取教训，积极进取，不断创新，以持之以恒的态度对待每一件事。喜欢接触新事物。
 
 Love life and love technology
 
@@ -112,6 +115,8 @@ Love life and love technology
 `羽毛球`、 `骑行`、 `摄影`、 `看书`、 `编程`
 
 -----
+
+期待加入贵公司
 
 
 
