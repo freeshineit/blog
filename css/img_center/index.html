@@ -3,32 +3,100 @@
 <head>
     <title>图片居中</title>
     <style type="text/css">
+    /* 公用样式 */
+        .g-fl{
+          width: 250px;
+          float: left;
+        }
+        .box_com{
+          width: 200px;
+          height: 200px;
+          border: 5px solid #333;
+          margin-bottom: 20px;
+        }
+        .box_com img{
+          max-width: 100%;
+          max-height: 100%;
+        }
+/* 使用text-align line-height */
+        .box {
+          width: auto;
+          margin: 0 auto;
+          clear: both;
+          display: table;
+        }
         .img_box{
-            width: 200px;
-            height: 200px;
-            border: 5px solid #333;
             text-align: center;
             font-size: 0;
             line-height: 200px;
-            margin-bottom: 20px;
         }
         .img_box img{
-            max-width: 100%;
-            max-height: 100%;
             display: inline;
             vertical-align: middle;
+        }
+/* 使用定位 position */
+        .img_box_position{
+            position: relative;
+        }
+
+        .img_box_position img {
+          position:absolute;
+          margin:auto;
+          top:0;
+          bottom:0;
+          left:0;
+          right:0;
+        }
+/* 使用flex布局 */
+        .img_box_flex{
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
     </style>
 </head>
 <body>
-    <div class="img_box">
-        <span><img src="./images/1.png"></span>
-    </div>
-    <div class="img_box">
-        <span><img src="./images/2.png"></span>
-    </div>
-    <div class="img_box">
-        <span><img src="./images/3.png"></span>
+    <div class="box">
+        <p>在不知图片尺寸的情况下，让其居中（图片宽度过宽时或者高度过高时，图片都不可以被隐藏）</p>
+        <br>
+        <div class="g-fl">
+          <p>使用text-align line-height</p>
+          <div class="box_com img_box">
+              <img src="./1.png">
+          </div>
+          <div class="box_com img_box">
+              <img src="./2.png">
+          </div>
+          <div class="box_com img_box">
+              <img src="./3.png">
+          </div>
+        </div>
+        <!--  -->
+        <div class="g-fl">
+          <p>使用定位position</p>
+          <div class="box_com img_box_position">
+              <img src="./1.png">
+          </div>
+          <div class="box_com img_box_position">
+              <img src="./2.png">
+          </div>
+          <div class="box_com img_box_position">
+              <img src="./3.png">
+          </div>
+        </div>
+        <!--  -->
+        <div class="g-fl">
+          <p>使用flex</p>
+          <div class="box_com img_box_flex">
+              <img src="./1.png">
+          </div>
+          <div class="box_com img_box_flex">
+              <img src="./2.png">
+          </div>
+          <div class="box_com img_box_flex">
+              <img src="./3.png">
+          </div>
+        </div>
     </div>
 </body>
 </html>
