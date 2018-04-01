@@ -1,0 +1,144 @@
+.lotus_one{
+	position: absolute;
+	top: 400px;
+	left: 200px;
+}
+
+.leaf{
+	width: 200px;
+	height: 200px;
+	border-radius: 100% 0%;
+	background: linear-gradient(45deg, rgba(188, 190, 192, 1) 8%, rgba(158, 31, 99, 1) 30%, rgba(158, 31, 99, 1) 100%);
+	position: absolute;
+	transform-origin: top right;
+	opacity: .5;
+	transform: rotate(45deg);
+}
+
+.lotus_one .leaf:nth-child(2) {
+	animation: open2 2s 1 forwards;
+}
+@keyframes open2 {
+	from {transform: rotate(45deg)}
+	to {transform: rotate(75deg)}
+}
+
+.lotus_one .leaf:nth-child(3) {
+	animation: open3 2s 1 forwards;
+}
+
+@keyframes open3 {
+	from {transform: rotate(45deg)}
+	to {transform: rotate(105deg)}
+}
+
+.lotus_one .leaf:nth-child(4) {
+	animation: open4 2s 1 forwards;
+}
+
+@keyframes open4 {
+	from {transform: rotate(45deg)}
+	to {transform: rotate(135deg)}
+}
+
+.lotus_one .leaf:nth-child(5) {
+	animation: open5 2s 1 forwards;
+}
+
+@keyframes open5 {
+	from {transform: rotate(45deg)}
+	to {transform: rotate(165deg)}
+}
+
+.lotus_one .leaf:nth-child(6) {
+	animation: open6 2s 1 forwards;
+}
+
+@keyframes open6 {
+	from {transform: rotate(45deg)}
+	to {transform: rotate(195deg); z-index: 100}
+}
+
+.lotus_one .leaf:nth-child(7) {
+	animation: open7 2s 1 forwards;
+}
+
+@keyframes open7 {
+	from {transform: rotate(45deg)}
+	to {transform: rotate(225deg)}
+}
+
+.lotus_two{
+	position: absolute;
+	top: 400px;
+	left: 800px;
+}
+
+
+.lotus_two .leaf {
+	transform: rotate(135deg);
+}
+
+.lotus_two .leaf:nth-child(1) {
+	animation: open_two1 2s 1 forwards;
+}
+@keyframes open_two1 {
+	from {transform: rotate(135deg)}
+	to {transform: rotate(45deg)}
+}
+
+.lotus_two .leaf:nth-child(2) {
+	animation: open_two2 2s 1 forwards;
+}
+@keyframes open_two2 {
+	from {transform: rotate(135deg)}
+	to {transform: rotate(75deg)}
+}
+
+.lotus_two .leaf:nth-child(3) {
+	animation: open_two3 2s 1 forwards;
+}
+
+@keyframes open_two3 {
+	from {transform: rotate(135deg)}
+	to {transform: rotate(105deg)}
+}
+
+.lotus_two .leaf:nth-child(4) {
+	animation: open_two4 2s 1 forwards;
+}
+
+@keyframes open_two4 {
+	from {transform: rotate(135deg)}
+	to {transform: rotate(135deg)}
+}
+
+.lotus_two .leaf:nth-child(5) {
+	animation: open_two5 2s 1 forwards;
+}
+
+@keyframes open_two5 {
+	from {transform: rotate(135deg)}
+	to {transform: rotate(165deg)}
+}
+
+.lotus_two .leaf:nth-child(6) {
+	animation: open_two6 2s 1 forwards;
+}
+
+@keyframes open_two6 {
+	from {transform: rotate(136deg)}
+	to {transform: rotate(195deg); z-index: 100}
+}
+
+.lotus_two .leaf:nth-child(7) {
+	animation: open_two7 2s 1 forwards;
+}
+
+@keyframes open_two7 {
+	from {transform: rotate(135deg)}
+	to {transform: rotate(225deg)}
+}
+
+
+
