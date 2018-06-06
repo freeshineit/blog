@@ -5,7 +5,7 @@ IBoxProps是一个接口 在组件中充当 props
 
 IBoxState是一个接口 在组件中充当 state
 
-```
+```ts
 interface IBoxProps extends React.Props<IBoxProps> {
     x?: number;
     y?: number;
