@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <style>
+        /* Disable intrinsic user agent touch behaviors (such as panning or zooming) */
+
+        canvas {
+            touch-action: none;
+        }
+    </style>
+
+
+    <script type='text/javascript'>
+        var lastPt = null;
+        var canvas;
+        var ctx;
+
+        function init() {
+            canvas = document.getElementById("mycanvas");
+            ctx = canvas.getContext("2d");
+            var offset = getOffset(canvas);
+            if (window.PointerEvent) {
+                canvas.addEventListener("pointerdown", function () {
+                    canvas.addEventListener("pointermove", draw, false);
+                }, false);
+                canvas.addEventListener("pointerup", endPointer, false);
+            }
+            else {
+                //Provide fallback for user agents that do not support Pointer Events
+                canvas.addEventListener("mousedown", function () {
+                    canvas.addEventListener("mousemove", draw, false);
+                }, false);
+                canvas.addEventListener("mouseup", endPointer, false);
+            }
+        }
+
+        // Event handler called for each pointerdown event:
+        function draw(e) {
+            if (lastPt != null) {
+                ctx.beginPath();
+                // Start at previous point
+                ctx.moveTo(lastPt.x, lastPt.y);
+                // Line to latest point
+                ctx.lineTo(e.pageX, e.pageY);
+                // Draw it!
+                ctx.stroke();
+            }
+            //Store latest pointer
+            lastPt = { x: e.pageX, y: e.pageY };
+        }
+
+        function getOffset(obj) {
+            //...
+        }
+
+        function endPointer(e) {
+            //Stop tracking the pointermove (and mousemove) events
+            canvas.removeEventListener("pointermove", draw, false);
+            canvas.removeEventListener("mousemove", draw, false);
+
+            //Set last point to null to end our pointer path
+            lastPt = null;
+        }
+
+    </script>
+</head>
+
+<body onload="init()">
+    <canvas id="mycanvas" width="500" height="500" style="border:1px solid black;"></canvas>
+</body>
+
+</html>
