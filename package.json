@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "execa": "^1.0.0",
+    "parse-git-status": "^0.1.0",
+    "shelljs": "^0.8.3"
+  }
+}
