@@ -1,0 +1,16 @@
+# deploy.yaml
+apps:
+  - script: ./app.js       # 入口文件
+    name: 'app'              # 程序名称
+    watch: true
+    env:                     # 环境变量
+      COMMON_VARIABLE: true
+    env_production:
+      NODE_ENV: production
+  - script: ./app.socket.js       # 入口文件
+    name: 'app_socket'              # 程序名称
+    watch: true
+    env:                     # 环境变量
+      COMMON_VARIABLE: true
+    env_production:
+      NODE_ENV: production

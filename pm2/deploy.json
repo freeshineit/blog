@@ -1,0 +1,20 @@
+{
+    "apps": [
+        {
+            "name": "express_react",
+            "script": "./app.js",
+            "watch": true,
+            "env": {
+                "NODE_ENV": "development"
+            }
+        },
+        {    
+            "name": "express_react_socket",
+            "script": "./app.socket.js",
+            "watch": true,
+            "env": {
+                "NODE_ENV": "development"
+            }
+        }
+    ]
+}

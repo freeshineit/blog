@@ -34,4 +34,43 @@
 
 ### [other](./other)
 
+pm2 
+
+### [pm2](./pm2)
+
 其他相关的文章
+
+
+### github badge(徽章)
+
++   build|passing
+
+    [![Build Status](https://travis-ci.org/freeshineit/react-clipboardjs-copy.svg?branch=master)](https://travis-ci.org/freeshineit/react-clipboardjs-copy)
+
+    在项目的根目录下新建`.travis.yml`
+
+    ```yml
+        language : node_js
+        node_js :
+         - stable
+        install:
+         - npm install
+        script:
+         - npm run lib
+    ```
+    
+    具体详情请查看[travis-ci](https://docs.travis-ci.com/)
+
+
++   coverage|90%
+
+    ![](https://img.shields.io/codacy/coverage/react-clipboardjs-copy/master.svg)
+
+    >   npm install istanbul --save-dev
+
+    ```json
+    "cover": "istanbul cover node_modules/mocha/bin/_mocha"
+    ```
+
+
+
